@@ -1,0 +1,1342 @@
+object FMantAsociadoDatosReniec: TFMantAsociadoDatosReniec
+  Left = 454
+  Top = 335
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Datos Capturados de Reniec'
+  ClientHeight = 436
+  ClientWidth = 665
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnClose = FormClose
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnlDatCapRen: TPanel
+    Left = 0
+    Top = 0
+    Width = 664
+    Height = 433
+    TabOrder = 0
+    object imgFoto: TImage
+      Left = 438
+      Top = 11
+      Width = 211
+      Height = 254
+      ParentShowHint = False
+      ShowHint = True
+      Stretch = True
+    end
+    object imgFirma: TImage
+      Left = 431
+      Top = 277
+      Width = 223
+      Height = 76
+      Stretch = True
+    end
+    object lblMsgUltimaAct2: TLabel
+      Left = 463
+      Top = 380
+      Width = 168
+      Height = 16
+      Alignment = taCenter
+      Caption = '25/12/2006 05:12:00 p.m.'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lblMsgUltimaAct1: TLabel
+      Left = 429
+      Top = 361
+      Width = 91
+      Height = 13
+      Caption = 'Ultima captura :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lbl: TLabel
+      Left = 428
+      Top = 404
+      Width = 31
+      Height = 13
+      Alignment = taCenter
+      Caption = 'Usu.:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lblUsuario: TLabel
+      Left = 461
+      Top = 402
+      Width = 55
+      Height = 16
+      Caption = 'Usuario'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label51: TLabel
+      Left = 428
+      Top = 381
+      Width = 30
+      Height = 13
+      Alignment = taCenter
+      Caption = 'Fec.:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object vallis: TValueListEditor
+      Left = 11
+      Top = 8
+      Width = 408
+      Height = 417
+      Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      TitleCaptions.Strings = (
+        'Informaci'#243'n'
+        'Datos')
+      ColWidths = (
+        162
+        240)
+    end
+  end
+  object ppBDEReniec: TppBDEPipeline
+    UserName = 'BDEReniec'
+    Left = 424
+    Top = 24
+  end
+  object ppRReniec: TppReport
+    AutoStop = False
+    DataPipeline = ppBDEReniec
+    PrinterSetup.BinName = 'Default'
+    PrinterSetup.DocumentName = 'Report'
+    PrinterSetup.PaperName = 'A4'
+    PrinterSetup.PrinterName = 'Default'
+    PrinterSetup.mmMarginBottom = 6350
+    PrinterSetup.mmMarginLeft = 6350
+    PrinterSetup.mmMarginRight = 6350
+    PrinterSetup.mmMarginTop = 6350
+    PrinterSetup.mmPaperHeight = 297127
+    PrinterSetup.mmPaperWidth = 210079
+    PrinterSetup.PaperSize = 9
+    DeviceType = 'Screen'
+    OutlineSettings.CreateNode = True
+    OutlineSettings.CreatePageNodes = True
+    OutlineSettings.Enabled = True
+    OutlineSettings.Visible = False
+    PreviewFormSettings.WindowState = wsMaximized
+    PreviewFormSettings.ZoomSetting = zsPercentage
+    PreviewFormSettings.ZoomPercentage = 120
+    TextSearchSettings.DefaultString = '<FindText>'
+    TextSearchSettings.Enabled = True
+    Left = 104
+    Top = 80
+    Version = '7.02'
+    mmColumnWidth = 0
+    DataPipelineName = 'ppBDEReniec'
+    object ppHeaderBand1: TppHeaderBand
+      mmBottomOffset = 0
+      mmHeight = 11377
+      mmPrintPosition = 0
+      object ppShape41: TppShape
+        UserName = 'Shape41'
+        Brush.Color = 14341846
+        Pen.Color = clWindow
+        mmHeight = 5556
+        mmLeft = 0
+        mmTop = 5556
+        mmWidth = 125413
+        BandType = 0
+      end
+      object ppLabel21: TppLabel
+        UserName = 'Label11'
+        Caption = 'DATOS PERSONALES'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3260
+        mmLeft = 41275
+        mmTop = 6879
+        mmWidth = 29845
+        BandType = 0
+      end
+    end
+    object ppDetailBand1: TppDetailBand
+      mmBottomOffset = 0
+      mmHeight = 129646
+      mmPrintPosition = 0
+      object ppShape31: TppShape
+        UserName = 'Shape31'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 41010
+        mmTop = 97631
+        mmWidth = 83873
+        BandType = 4
+      end
+      object ppShape28: TppShape
+        UserName = 'Shape28'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 41010
+        mmTop = 79111
+        mmWidth = 83873
+        BandType = 4
+      end
+      object ppShape26: TppShape
+        UserName = 'Shape26'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 41010
+        mmTop = 73025
+        mmWidth = 83873
+        BandType = 4
+      end
+      object ppShape21: TppShape
+        UserName = 'Shape21'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 41010
+        mmTop = 66940
+        mmWidth = 83873
+        BandType = 4
+      end
+      object ppShape4: TppShape
+        UserName = 'Shape4'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5556
+        mmLeft = 41540
+        mmTop = 6350
+        mmWidth = 83873
+        BandType = 4
+      end
+      object ppShape3: TppShape
+        UserName = 'Shape3'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5556
+        mmLeft = 0
+        mmTop = 6350
+        mmWidth = 40481
+        BandType = 4
+      end
+      object ppShape1: TppShape
+        UserName = 'Shape1'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5556
+        mmLeft = 0
+        mmTop = 794
+        mmWidth = 40480
+        BandType = 4
+      end
+      object ppLabel1: TppLabel
+        UserName = 'Label1'
+        Caption = 'Nro. de Libro'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3259
+        mmLeft = 1059
+        mmTop = 2116
+        mmWidth = 16340
+        BandType = 4
+      end
+      object ppLabel2: TppLabel
+        UserName = 'Label2'
+        Caption = 'Libreta Electoral'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3259
+        mmLeft = 1059
+        mmTop = 7673
+        mmWidth = 20490
+        BandType = 4
+      end
+      object ppShape5: TppShape
+        UserName = 'Shape5'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 0
+        mmTop = 12171
+        mmWidth = 40481
+        BandType = 4
+      end
+      object ppShape6: TppShape
+        UserName = 'Shape6'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 41540
+        mmTop = 12171
+        mmWidth = 83873
+        BandType = 4
+      end
+      object ppShape7: TppShape
+        UserName = 'Shape7'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 0
+        mmTop = 18256
+        mmWidth = 40481
+        BandType = 4
+      end
+      object ppShape8: TppShape
+        UserName = 'Shape8'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 41540
+        mmTop = 18256
+        mmWidth = 83873
+        BandType = 4
+      end
+      object ppShape9: TppShape
+        UserName = 'Shape9'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 0
+        mmTop = 24342
+        mmWidth = 40481
+        BandType = 4
+      end
+      object ppShape10: TppShape
+        UserName = 'Shape10'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 41540
+        mmTop = 24342
+        mmWidth = 83873
+        BandType = 4
+      end
+      object ppShape11: TppShape
+        UserName = 'Shape11'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5822
+        mmLeft = 41275
+        mmTop = 36513
+        mmWidth = 83873
+        BandType = 4
+      end
+      object ppShape12: TppShape
+        UserName = 'Shape12'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 0
+        mmTop = 36513
+        mmWidth = 40481
+        BandType = 4
+      end
+      object ppShape13: TppShape
+        UserName = 'Shape13'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 0
+        mmTop = 30427
+        mmWidth = 40481
+        BandType = 4
+      end
+      object ppLabel3: TppLabel
+        UserName = 'Label3'
+        Caption = 'Documento Sustentatorio'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3259
+        mmLeft = 1059
+        mmTop = 32015
+        mmWidth = 32047
+        BandType = 4
+      end
+      object ppLabel4: TppLabel
+        UserName = 'Label4'
+        Caption = 'Lugar de Nacimiento'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3260
+        mmLeft = 1059
+        mmTop = 38100
+        mmWidth = 26162
+        BandType = 4
+      end
+      object ppShape14: TppShape
+        UserName = 'Shape14'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 41275
+        mmTop = 30427
+        mmWidth = 83873
+        BandType = 4
+      end
+      object ppShape15: TppShape
+        UserName = 'Shape15'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 0
+        mmTop = 42598
+        mmWidth = 40481
+        BandType = 4
+      end
+      object ppShape16: TppShape
+        UserName = 'Shape16'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 41275
+        mmTop = 42598
+        mmWidth = 83873
+        BandType = 4
+      end
+      object ppShape17: TppShape
+        UserName = 'Shape17'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 0
+        mmTop = 48683
+        mmWidth = 40481
+        BandType = 4
+      end
+      object ppShape18: TppShape
+        UserName = 'Shape18'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 41275
+        mmTop = 48683
+        mmWidth = 83873
+        BandType = 4
+      end
+      object ppShape19: TppShape
+        UserName = 'Shape19'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 0
+        mmTop = 54769
+        mmWidth = 40481
+        BandType = 4
+      end
+      object ppShape20: TppShape
+        UserName = 'Shape101'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 41275
+        mmTop = 54769
+        mmWidth = 83873
+        BandType = 4
+      end
+      object ppShape22: TppShape
+        UserName = 'Shape22'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 0
+        mmTop = 66940
+        mmWidth = 40481
+        BandType = 4
+      end
+      object ppShape23: TppShape
+        UserName = 'Shape23'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 0
+        mmTop = 60854
+        mmWidth = 40481
+        BandType = 4
+      end
+      object ppLabel5: TppLabel
+        UserName = 'Label5'
+        Caption = 'Estatura'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3260
+        mmLeft = 1059
+        mmTop = 62442
+        mmWidth = 10583
+        BandType = 4
+      end
+      object ppLabel6: TppLabel
+        UserName = 'Label6'
+        Caption = 'Sexo'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3260
+        mmLeft = 1059
+        mmTop = 68527
+        mmWidth = 6392
+        BandType = 4
+      end
+      object ppShape24: TppShape
+        UserName = 'Shape24'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 41010
+        mmTop = 60854
+        mmWidth = 83873
+        BandType = 4
+      end
+      object ppShape25: TppShape
+        UserName = 'Shape25'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 0
+        mmTop = 73025
+        mmWidth = 40481
+        BandType = 4
+      end
+      object ppShape27: TppShape
+        UserName = 'Shape27'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 0
+        mmTop = 79111
+        mmWidth = 40481
+        BandType = 4
+      end
+      object ppShape29: TppShape
+        UserName = 'Shape29'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 0
+        mmTop = 85196
+        mmWidth = 40481
+        BandType = 4
+      end
+      object ppShape30: TppShape
+        UserName = 'Shape30'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 41010
+        mmTop = 85196
+        mmWidth = 83873
+        BandType = 4
+      end
+      object ppShape32: TppShape
+        UserName = 'Shape32'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 0
+        mmTop = 97631
+        mmWidth = 40481
+        BandType = 4
+      end
+      object ppShape33: TppShape
+        UserName = 'Shape33'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 0
+        mmTop = 91546
+        mmWidth = 40481
+        BandType = 4
+      end
+      object ppLabel7: TppLabel
+        UserName = 'Label7'
+        Caption = 'Restricciones'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3260
+        mmLeft = 1059
+        mmTop = 93134
+        mmWidth = 17060
+        BandType = 4
+      end
+      object ppLabel8: TppLabel
+        UserName = 'Label8'
+        Caption = 'Fecha de Inscripci'#243'n'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3260
+        mmLeft = 1059
+        mmTop = 99219
+        mmWidth = 26204
+        BandType = 4
+      end
+      object ppShape34: TppShape
+        UserName = 'Shape34'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 41010
+        mmTop = 91546
+        mmWidth = 83873
+        BandType = 4
+      end
+      object ppShape35: TppShape
+        UserName = 'Shape35'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 0
+        mmTop = 103717
+        mmWidth = 40481
+        BandType = 4
+      end
+      object ppShape36: TppShape
+        UserName = 'Shape36'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 41010
+        mmTop = 103717
+        mmWidth = 83873
+        BandType = 4
+      end
+      object ppShape37: TppShape
+        UserName = 'Shape37'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 0
+        mmTop = 109802
+        mmWidth = 40481
+        BandType = 4
+      end
+      object ppShape38: TppShape
+        UserName = 'Shape38'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 41010
+        mmTop = 109802
+        mmWidth = 83873
+        BandType = 4
+      end
+      object ppShape39: TppShape
+        UserName = 'Shape39'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 0
+        mmTop = 115888
+        mmWidth = 40481
+        BandType = 4
+      end
+      object ppShape40: TppShape
+        UserName = 'Shape301'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 41010
+        mmTop = 115888
+        mmWidth = 83873
+        BandType = 4
+      end
+      object ppLabel9: TppLabel
+        UserName = 'Label9'
+        Caption = 'Apellido Paterno'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3259
+        mmLeft = 1059
+        mmTop = 13758
+        mmWidth = 20785
+        BandType = 4
+      end
+      object ppLabel10: TppLabel
+        UserName = 'Label10'
+        Caption = 'Apellido Materno'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3259
+        mmLeft = 1059
+        mmTop = 19844
+        mmWidth = 21209
+        BandType = 4
+      end
+      object ppLabel11: TppLabel
+        UserName = 'Label101'
+        Caption = 'Nombres'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3259
+        mmLeft = 1059
+        mmTop = 25929
+        mmWidth = 11514
+        BandType = 4
+      end
+      object ppLabel12: TppLabel
+        UserName = 'Label12'
+        Caption = 'Nombre del Padre'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3260
+        mmLeft = 1059
+        mmTop = 44186
+        mmWidth = 22987
+        BandType = 4
+      end
+      object ppLabel13: TppLabel
+        UserName = 'Label13'
+        Caption = 'Nombre de la Madre'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3260
+        mmLeft = 1059
+        mmTop = 50006
+        mmWidth = 25781
+        BandType = 4
+      end
+      object ppLabel14: TppLabel
+        UserName = 'Label14'
+        Caption = 'Fecha de Nacimiento'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3260
+        mmLeft = 1059
+        mmTop = 56356
+        mmWidth = 26839
+        BandType = 4
+      end
+      object ppLabel15: TppLabel
+        UserName = 'Label15'
+        Caption = 'Estado Civil'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3260
+        mmLeft = 1323
+        mmTop = 74613
+        mmWidth = 14986
+        BandType = 4
+      end
+      object ppLabel16: TppLabel
+        UserName = 'Label16'
+        Caption = 'Grado de Instrucci'#243'n'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3260
+        mmLeft = 1323
+        mmTop = 80698
+        mmWidth = 26331
+        BandType = 4
+      end
+      object ppLabel17: TppLabel
+        UserName = 'Label17'
+        Caption = 'Lugar de Domicilio'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3260
+        mmLeft = 1323
+        mmTop = 86784
+        mmWidth = 23495
+        BandType = 4
+      end
+      object ppLabel18: TppLabel
+        UserName = 'Label18'
+        Caption = 'Constancia de Votaci'#243'n'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3260
+        mmLeft = 1058
+        mmTop = 105304
+        mmWidth = 29972
+        BandType = 4
+      end
+      object ppLabel19: TppLabel
+        UserName = 'Label19'
+        Caption = 'Fecha de Emisi'#243'n de Docum.'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3260
+        mmLeft = 1058
+        mmTop = 111390
+        mmWidth = 37338
+        BandType = 4
+      end
+      object ppLabel20: TppLabel
+        UserName = 'Label20'
+        Caption = 'Direcci'#243'n'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3260
+        mmLeft = 1058
+        mmTop = 117475
+        mmWidth = 11811
+        BandType = 4
+      end
+      object ppShape2: TppShape
+        UserName = 'Shape2'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5556
+        mmLeft = 41540
+        mmTop = 794
+        mmWidth = 83873
+        BandType = 4
+      end
+      object ppDBText1: TppDBText
+        UserName = 'DBText1'
+        DataField = 'NUMLIB'
+        DataPipeline = ppBDEReniec
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppBDEReniec'
+        mmHeight = 3440
+        mmLeft = 43127
+        mmTop = 2117
+        mmWidth = 71702
+        BandType = 4
+      end
+      object ppDBText2: TppDBText
+        UserName = 'DBText2'
+        DataField = 'DNI'
+        DataPipeline = ppBDEReniec
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppBDEReniec'
+        mmHeight = 3440
+        mmLeft = 43127
+        mmTop = 7408
+        mmWidth = 71702
+        BandType = 4
+      end
+      object ppDBText3: TppDBText
+        UserName = 'DBText3'
+        DataField = 'APEPAT'
+        DataPipeline = ppBDEReniec
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppBDEReniec'
+        mmHeight = 3440
+        mmLeft = 43127
+        mmTop = 13494
+        mmWidth = 71702
+        BandType = 4
+      end
+      object ppDBText4: TppDBText
+        UserName = 'DBText4'
+        DataField = 'APEMAT'
+        DataPipeline = ppBDEReniec
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppBDEReniec'
+        mmHeight = 3440
+        mmLeft = 43127
+        mmTop = 19579
+        mmWidth = 71702
+        BandType = 4
+      end
+      object ppDBText5: TppDBText
+        UserName = 'DBText5'
+        DataField = 'NOMBRE'
+        DataPipeline = ppBDEReniec
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppBDEReniec'
+        mmHeight = 3440
+        mmLeft = 43127
+        mmTop = 25665
+        mmWidth = 71702
+        BandType = 4
+      end
+      object ppDBText6: TppDBText
+        UserName = 'DBText6'
+        DataField = 'OTRDOC'
+        DataPipeline = ppBDEReniec
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppBDEReniec'
+        mmHeight = 3440
+        mmLeft = 43127
+        mmTop = 32015
+        mmWidth = 71702
+        BandType = 4
+      end
+      object ppDBText7: TppDBText
+        UserName = 'DBText7'
+        DataField = 'LUGNAC'
+        DataPipeline = ppBDEReniec
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppBDEReniec'
+        mmHeight = 3440
+        mmLeft = 43127
+        mmTop = 37306
+        mmWidth = 71702
+        BandType = 4
+      end
+      object ppDBText8: TppDBText
+        UserName = 'DBText8'
+        DataField = 'NOMPAD'
+        DataPipeline = ppBDEReniec
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppBDEReniec'
+        mmHeight = 3440
+        mmLeft = 43127
+        mmTop = 43392
+        mmWidth = 71702
+        BandType = 4
+      end
+      object ppDBText9: TppDBText
+        UserName = 'DBText9'
+        DataField = 'NOMMAD'
+        DataPipeline = ppBDEReniec
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppBDEReniec'
+        mmHeight = 3440
+        mmLeft = 43127
+        mmTop = 49477
+        mmWidth = 71702
+        BandType = 4
+      end
+      object ppDBText10: TppDBText
+        UserName = 'DBText10'
+        DataField = 'FECNAC'
+        DataPipeline = ppBDEReniec
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppBDEReniec'
+        mmHeight = 3440
+        mmLeft = 43127
+        mmTop = 55563
+        mmWidth = 71702
+        BandType = 4
+      end
+      object ppDBText11: TppDBText
+        UserName = 'DBText101'
+        DataField = 'LUGDOM'
+        DataPipeline = ppBDEReniec
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppBDEReniec'
+        mmHeight = 3440
+        mmLeft = 43127
+        mmTop = 85990
+        mmWidth = 71702
+        BandType = 4
+      end
+      object ppDBText12: TppDBText
+        UserName = 'DBText12'
+        DataField = 'GRAINS'
+        DataPipeline = ppBDEReniec
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppBDEReniec'
+        mmHeight = 3440
+        mmLeft = 43127
+        mmTop = 79904
+        mmWidth = 71702
+        BandType = 4
+      end
+      object ppDBText13: TppDBText
+        UserName = 'DBText13'
+        DataField = 'ESTCIV'
+        DataPipeline = ppBDEReniec
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppBDEReniec'
+        mmHeight = 3440
+        mmLeft = 43127
+        mmTop = 73819
+        mmWidth = 71702
+        BandType = 4
+      end
+      object ppDBText14: TppDBText
+        UserName = 'DBText14'
+        DataField = 'SEXO'
+        DataPipeline = ppBDEReniec
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppBDEReniec'
+        mmHeight = 3440
+        mmLeft = 43127
+        mmTop = 67733
+        mmWidth = 71702
+        BandType = 4
+      end
+      object ppDBText15: TppDBText
+        UserName = 'DBText15'
+        DataField = 'ESTATURA'
+        DataPipeline = ppBDEReniec
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppBDEReniec'
+        mmHeight = 3440
+        mmLeft = 43127
+        mmTop = 62442
+        mmWidth = 71702
+        BandType = 4
+      end
+      object ppDBText16: TppDBText
+        UserName = 'DBText16'
+        DataField = 'DIRECCION'
+        DataPipeline = ppBDEReniec
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppBDEReniec'
+        mmHeight = 3440
+        mmLeft = 43127
+        mmTop = 116681
+        mmWidth = 83344
+        BandType = 4
+      end
+      object ppDBText17: TppDBText
+        UserName = 'DBText17'
+        DataField = 'FECEMIDOC'
+        DataPipeline = ppBDEReniec
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppBDEReniec'
+        mmHeight = 3440
+        mmLeft = 43127
+        mmTop = 110596
+        mmWidth = 71702
+        BandType = 4
+      end
+      object ppDBText18: TppDBText
+        UserName = 'DBText18'
+        DataField = 'STAVOT'
+        DataPipeline = ppBDEReniec
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppBDEReniec'
+        mmHeight = 3440
+        mmLeft = 43127
+        mmTop = 104511
+        mmWidth = 71702
+        BandType = 4
+      end
+      object ppDBText19: TppDBText
+        UserName = 'DBText19'
+        DataField = 'FECINS'
+        DataPipeline = ppBDEReniec
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppBDEReniec'
+        mmHeight = 3440
+        mmLeft = 43127
+        mmTop = 98425
+        mmWidth = 71702
+        BandType = 4
+      end
+      object ppDBText20: TppDBText
+        UserName = 'DBText20'
+        DataField = 'RESTRICCIONES'
+        DataPipeline = ppBDEReniec
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppBDEReniec'
+        mmHeight = 3440
+        mmLeft = 43127
+        mmTop = 93134
+        mmWidth = 71702
+        BandType = 4
+      end
+      object ppFoto: TppImage
+        UserName = 'Foto'
+        MaintainAspectRatio = False
+        Stretch = True
+        Transparent = True
+        mmHeight = 508001
+        mmLeft = 0
+        mmTop = 0
+        mmWidth = 508001
+        BandType = 4
+      end
+      object ppFirma: TppImage
+        UserName = 'Firma'
+        MaintainAspectRatio = False
+        Stretch = True
+        Transparent = True
+        mmHeight = 37571
+        mmLeft = 117740
+        mmTop = 58473
+        mmWidth = 76729
+        BandType = 4
+      end
+      object ppShape60: TppShape
+        UserName = 'Shape60'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 265
+        mmTop = 121973
+        mmWidth = 40481
+        BandType = 4
+      end
+      object ppShape61: TppShape
+        UserName = 'Shape61'
+        Brush.Color = 15395048
+        Pen.Color = clWindow
+        mmHeight = 5821
+        mmLeft = 41275
+        mmTop = 121973
+        mmWidth = 83873
+        BandType = 4
+      end
+      object ppLabel141: TppLabel
+        UserName = 'Label208'
+        Caption = 'Estado'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3260
+        mmLeft = 1323
+        mmTop = 123031
+        mmWidth = 8848
+        BandType = 4
+      end
+      object ppDBText34: TppDBText
+        UserName = 'DBText34'
+        DataField = 'FLAG_EXPIRA'
+        DataPipeline = ppBDEReniec
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppBDEReniec'
+        mmHeight = 3440
+        mmLeft = 43127
+        mmTop = 123031
+        mmWidth = 71702
+        BandType = 4
+      end
+    end
+    object ppFooterBand1: TppFooterBand
+      mmBottomOffset = 0
+      mmHeight = 13229
+      mmPrintPosition = 0
+    end
+  end
+end
